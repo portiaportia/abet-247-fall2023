@@ -1,0 +1,36 @@
+/**
+ * @author Zoe Mccuen
+ */
+package strategy;
+/**
+ * Describes the character (Knight) and what his weapon is (Bow)
+ */
+public class Knight extends Character {
+	private String Name;
+	private WeaponBehavior Weapon;
+
+	public Knight(String aName) {
+		this.Name = aName;
+		this.Weapon = new WeaponBow();
+		this.setWeaponBehavior(Weapon);
+	}
+
+	public String toString() {
+		return this.getName() + " is a valiant Knight";
+	}
+	public void setWeaponBehavior(WeaponBehavior aWeapon) {
+		this.Weapon = aWeapon;
+	}
+
+	public String attack() {
+		return this.Weapon.attack();
+	}
+	
+	public String getName() {
+		return this.Name;
+	}
+/**
+ * creates a string representation of the Knight character
+ * @return A string version of the Knight
+ */
+}

@@ -1,0 +1,22 @@
+/**
+ * @author Zoe Mccuen
+ */
+package strategy;
+/**
+ * Provides options that the Axe can be used for with the Troll character
+ */
+public class WeaponAxe implements WeaponBehavior {
+
+	public String attack() {
+		String rc = "";
+		switch((int)Math.floor(Math.random() * 2)) {
+		case 0: 
+			rc = "Swing an axe";
+			break;
+		default:
+			rc = "Twirl with an axe";
+			break;
+		}
+		return rc;
+	}
+}

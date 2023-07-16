@@ -1,0 +1,22 @@
+/**
+ * @author Zoe Mccuen
+ */
+package strategy;
+/**
+ * Provides options that the Bow can be used for with the Knight character
+ */
+public class WeaponBow implements WeaponBehavior {
+
+	public String attack() {
+		String rc = "";
+		switch((int)Math.floor(Math.random() * 2)) {
+		case 0: 
+			rc = "Draw and loose an arrow";
+			break;
+		default:
+			rc = "Shoot arrow high in the sky";
+			break;
+		}
+		return rc;
+	}
+}

@@ -1,0 +1,37 @@
+/**
+ * @author Zoe Mccuen
+ */
+package strategy;
+/**
+ * Describes the character (Troll) and what his weapon is (Axe)
+ */
+public class Troll extends Character {
+	private String Name;
+	private WeaponBehavior Weapon;
+
+	public Troll(String aName) {
+		this.Name = aName;
+		this.Weapon = new WeaponAxe();
+		this.setWeaponBehavior(Weapon);
+	}
+
+	public String toString() {
+		return this.getName() + " is a funny Troll";
+	}
+
+	public void setWeaponBehavior(WeaponBehavior aWeapon) {
+		this.Weapon = aWeapon;
+	}
+
+	public String attack() {
+		return this.Weapon.attack();
+	}
+	
+	public String getName() {
+		return this.Name;
+	}
+/**
+ * creates a string representation of the Troll character
+ * @return A string version of the Troll
+ */
+}

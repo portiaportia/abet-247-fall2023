@@ -1,0 +1,14 @@
+/**
+ * @author Zoe Mccuen
+ */
+package strategy;
+import java.util.Random;
+/**
+ * Determines which option will be executed by the weapon for each character
+ */
+public interface WeaponBehavior {
+	public String weaponName = "";
+
+	public abstract String attack();
+
+}

@@ -1,0 +1,37 @@
+/**
+ * @author Zoe Mccuen
+ */
+package strategy;
+/**
+ * Describes the character (King) and what his weapon is (Sword)
+ */
+public class King extends Character {
+	private String Name;
+	private WeaponBehavior Weapon;
+
+	public King(String aName) {
+		this.Name = aName;
+		this.Weapon = new WeaponSword();
+		this.setWeaponBehavior(Weapon);
+	}
+
+	public String toString() {
+		return this.getName() + " is a noble King";
+	}
+
+	public void setWeaponBehavior(WeaponBehavior aWeapon) {
+		this.Weapon = aWeapon;
+	}
+
+	public String attack() {
+		return this.Weapon.attack();
+	}
+	
+	public String getName() {
+		return this.Name;
+	}
+/**
+ * creates a string representation of the King character
+ * @return A string version of the King
+ */
+}

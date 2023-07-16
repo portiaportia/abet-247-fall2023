@@ -1,0 +1,31 @@
+/**
+ * @author Zoe Mccuen
+ */
+package strategy;
+/**
+ * Executes what the characters names are and how they attack others
+ */
+public abstract class Character {
+	protected String name;
+	protected WeaponBehavior Weapon = new WeaponNone();
+
+		
+	public String toString() {
+		return this.name + " is a generic Character";
+	}	
+/**
+ * Creates a string representation of the characters
+ * @return A string representation of the player
+ */
+	public void setWeaponBehavior(WeaponBehavior aWeapon) {
+		this.setWeaponBehavior(aWeapon);
+	}
+/**
+ * Calculates the weapon and type of attack
+ * @return the attack type and weapon
+ */
+	public String attack() {
+		return this.Weapon.attack();
+	}
+	
+}

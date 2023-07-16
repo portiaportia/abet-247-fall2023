@@ -1,0 +1,23 @@
+/**
+ * @author Zoe Mccuen
+ */
+package strategy;
+/**
+ * Executes the act of the Troll loosing his weapon the axe 
+ * if that is what needs to be executed from the random selection
+ */
+public class WeaponNone implements WeaponBehavior {
+
+	public String attack() {
+		String rc = "";
+		switch((int)Math.floor(Math.random() * 2)) {
+		case 0: 
+			rc = "Oh no! I lost my weapon";
+			break;
+		default:
+			rc = "No one lets me have a weapon";
+			break;
+		}
+		return rc;
+	}
+}

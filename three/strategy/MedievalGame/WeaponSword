@@ -1,0 +1,25 @@
+/**
+ * @author Zoe Mccuen
+ */
+package strategy;
+/**
+ * Provides options that the Sword can be used for with the King character
+ */
+public class WeaponSword implements WeaponBehavior {
+
+	public String attack() {
+		String rc = "";
+		switch((int)Math.floor(Math.random() * 3)) {
+		case 0: 
+			rc = "Fancy turn and slice with sword";
+			break;
+		case 1: 
+			rc = "Jam opponents blade with sword";
+			break;
+		default:
+			rc = "Lunge and strike with sword";
+			break;
+		}
+		return rc;
+	}
+}

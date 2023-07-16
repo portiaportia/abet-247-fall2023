@@ -1,0 +1,24 @@
+/**
+ * @author Zoe Mccuen
+ */
+package strategy;
+/**
+ * Provides options that the Knife can be used for with the Queen character
+ */
+public class WeaponKnife implements WeaponBehavior {			
+	public String attack() {
+		String rc = "";
+		switch((int)Math.floor(Math.random() * 3)) {
+		case 0: 
+			rc = "Slice with knife";
+			break;
+		case 1: 
+			rc = "Jab with a knife";
+			break;
+		default:
+			rc = "Sneak up on opponent with knife";
+			break;
+		}
+		return rc;
+	}
+}
